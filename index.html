@@ -13,34 +13,33 @@
     <div class="row">
         <div class="col">
           <label for="inputState" class="form-label">1st Number</label>
-          <input type="text" class="form-control" placeholder="First Number" aria-label="First Number">
+          <input type="text" id="firstNumber" class="form-control" placeholder="First Number" aria-label="First Number">
         </div>
         <div class="col">
             <label for="inputState" class="form-label"> Operator</label>
-            <select id="inputState" class="form-select">
+            <select id="operator" class="form-select">
               <option selected>Choose...</option>
-              <option>Addition (+)</option>
-              <option>Subtraction (-)</option>
-              <option>Multiplication (*)</option>
-              <option>Division (/)</option>
+              <option value="+">Addition (+)</option>
+              <option value="-">Subtraction (-)</option>
+              <option value="*">Multiplication (*)</option>
+              <option value="/">Division (/)</option>
             </select>
           </div>
         <div class="col">
-          <label for="inputState" class="form-label">2nd Number</label>
-          <input type="text" class="form-control" placeholder="Second Number" aria-label="Second Number">
+          <label for="inputState"  class="form-label">2nd Number</label>
+          <input type="text" id="secondNumber" class="form-control" placeholder="Second Number" aria-label="Second Number">
         </div>
 
         
       </div>
 
 
-    <button type="submit" class="btn">Calculate</button>
+    <button type="button" onclick="calculate();" class="btn btn-danger m-3 txt-center">Calculate</button>
 
     <div class="col">
-        <input type="text" class="form-control" placeholder="Result" aria-label="Result">
+        <input id="result" type="text" class="form-control" placeholder="Result" aria-label="Result">
       </div>
 
-
+      <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-</html>

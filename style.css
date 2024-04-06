@@ -1,11 +1,8 @@
 
 
 .bdy{
-    background-color: darkcyan;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b4e391+0,61c419+50,b4e391+100;Green+3D */
+background: linear-gradient(135deg,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
     padding: 170px 20px 0px 20px;
-}
-.btn{
-    margin: 10px 0px 10px 0px ;
-    border-radius: 5px;
-    background-color: brown;
 }

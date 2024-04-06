@@ -1,23 +1,47 @@
-function calculate (x,y,operator){
-    if (x!=0 && y!=0 && operator=="+"){
-        console.log(x+y);
-        }
-        else if (x!=0 && y!=0 && operator=="-"){
-            console.log(x-y);
-            }
+function calculate() {
+  var firstNumber = document.getElementById("firstNumber").value;
+  var secondNumber = document.getElementById("secondNumber").value;
+  var operator = document.getElementById("operator").value;
 
-            else if (x!=0 && y!=0 && operator=="*"){
-                console.log(x*y);
-                }
+  var result = document.getElementById("result");
 
-               else if (x!=0 && y!=0 && operator=="/"){
-                    console.log(x/y);
-                    }
-            
+  checkInp(firstNumber, secondNumber);
 
-    else {
-        console.log ("Please enter a valid number, empty not allowed");
+  var calc = performCalculate(
+    parseFloat(firstNumber),
+    parseFloat(secondNumber),
+    operator
+  );
+  result.value = calc.toFixed(2);
+}
+
+
+function checkInp(x, y)
+{
+    var checkCharecter=/^[0-9]+$/;
+    if (!x.match(checkCharecter) || !y.match(checkCharecter))
+    {
+        alert("Must input Number");
+        return false;
     }
 }
 
-calculate(6,5,"*")
+function performCalculate(x, y, operator) {
+  if (x >= 0 && y >= 0 && operator == "+") {
+    //console.log(x+y);
+    return x + y;
+  } else if (x >= 0 && y >= 0 && operator == "-") {
+    return x - y;
+  } else if (x >= 0 && y >= 0 && operator == "*") {
+    return x * y;
+  } else if (x >= 0 && y >= 0 && operator == "/") {
+    return x / y;
+  } else {
+    return "Please enter a valid number, empty not allowed";
+  }
+}
+
+// var sum = calculate(6,5,"+");
+// //console.log (sum);
+// var sum2=document.getElementById('result');
+// sum2.innerHTML=sum;
