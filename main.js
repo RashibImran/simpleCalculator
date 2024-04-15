@@ -12,7 +12,7 @@ function calculate() {
     parseFloat(secondNumber),
     operator
   );
-  result.value = calc.toFixed(2);
+  result.value = calc.toFixed(3);
 }
 
 
@@ -21,14 +21,14 @@ function checkInp(x, y)
     var checkCharecter=/^[0-9]+$/;
     if (!x.match(checkCharecter) || !y.match(checkCharecter))
     {
-        alert("Must input Number");
+        // alert("Must input Number");
+        result.value=("Must input integer or float number ! any characters or special-characters are not allowed");
         return false;
     }
 }
 
 function performCalculate(x, y, operator) {
   if (x >= 0 && y >= 0 && operator == "+") {
-    //console.log(x+y);
     return x + y;
   } else if (x >= 0 && y >= 0 && operator == "-") {
     return x - y;
@@ -41,7 +41,3 @@ function performCalculate(x, y, operator) {
   }
 }
 
-// var sum = calculate(6,5,"+");
-// //console.log (sum);
-// var sum2=document.getElementById('result');
-// sum2.innerHTML=sum;
